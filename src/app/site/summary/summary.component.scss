@@ -1,0 +1,20 @@
+// import globale style
+@import "src/_global.scss";
+
+mat-card {
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.summary-left-side {
+    width: 680px;
+}
+
+.urgency-summary {
+    height: 190px;
+    background-color: $primary-color;
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
