@@ -33,7 +33,24 @@ $join-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($join-theme);
 
+// =============================================
+
+// import globale style
+@import "src/_global.scss";
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+  font-size: 60px !important;
+  line-height: 60px !important;
+  font-weight: 600 !important;
+  color: $primary-color;
+}
+
+h2 {
+  font-size: 33px !important;
+  color: $font-color-2;
+}
