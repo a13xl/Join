@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "join-0815": {
+      "hosting": {
+        "join": [
+          "join-0815"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "join-0815"
+  }
+}
