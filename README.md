@@ -2,7 +2,7 @@
 
 A Kanban Board with Design from https://www.figma.com/file/mhDPfpde734bGDOh5W1U3f/Join-Version-2-final?type=design&node-id=0-1
 
-## ![#f03c15] Attention: Password isn't encrypted!
+## Attention: Password isn't encrypted!
 
 _____________________________________________________________
 
