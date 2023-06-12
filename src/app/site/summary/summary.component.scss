@@ -6,15 +6,88 @@ mat-card {
     cursor: pointer;
 }
 
+.summary-container {
+    max-width: 1000px;
+    padding: 150px 120px;
+}
+
+.summary-greeting {
+    width: 100%;
+    padding-bottom: 75px;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        margin: 0 0 0 10px;
+    }
+}
+
 .summary-left-side {
-    width: 680px;
+    width: 635px;
 }
 
 .urgency-summary {
     height: 190px;
+    padding: 23px 107px;
     background-color: $primary-color;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
 
     &:hover {
         background-color: $secondary-color;
+    }
+}
+
+.urgent-nr-container {
+    font-size: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.urgent-nr {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    img {
+        height: 63px;
+        width: 63px;
+        border-radius: 100%;
+        border: 3px solid white;
+    }
+
+    span {
+        font-size: 48px;
+        font-weight: 500;
+    }
+}
+
+.seperator {
+    height: 100%;
+    width: 5px;
+    margin: 0 35px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.urgent-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+    span:first-child {
+        font-size: 33px;
+        font-weight: 500;
+    }
+
+    span {
+        font-size: 23px;
     }
 }
