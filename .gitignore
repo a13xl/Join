@@ -46,3 +46,6 @@ Thumbs.db
 *-debug.log
 .runtimeconfig.json
 /src/environments/*
+
+# privacy
+/src/app/site/legal-notice/legal-notice.component.html

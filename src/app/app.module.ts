@@ -15,12 +15,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { HelpComponent } from './site/help/help.component';
+import { LegalNoticeComponent } from './site/legal-notice/legal-notice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SummaryComponent,
     HelpComponent,
+    LegalNoticeComponent,
   ],
   imports: [
     BrowserModule,

@@ -54,3 +54,11 @@ h2 {
   font-size: 33px !important;
   color: $font-color-2;
 }
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    color: -webkit-link;
+  }
+}
