@@ -1,9 +1,26 @@
 // import globale style
 @import "src/_global.scss";
 
+$num-of-size: 48px;
+$num-of-weigth: 500;
+$task-underline-size: 23px;
+
 mat-card {
     border-radius: 30px;
     cursor: pointer;
+    transition: all 150ms ease-in-out;
+    -webkit-transition: all 150ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.07);
+        transition: all 150ms ease-in-out;
+        -webkit-transition: all 150ms ease-in-out;
+    }
+}
+
+img {
+    height: 63px;
+    width: 63px;
 }
 
 .summary-container {
@@ -24,25 +41,33 @@ mat-card {
     }
 }
 
-.summary-left-side {
-    width: 635px;
+.summary-top-side {
+    height: 190px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .urgency-summary {
-    height: 190px;
-    padding: 23px 107px;
+    width: 635px;
+    padding: 39px 100px;
     background-color: $primary-color;
     color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
     flex-direction: row;
     justify-content: center;
 
     &:hover {
-        background-color: $secondary-color;
+        color: $primary-color;
+        background-color: white;
+
+        .seperator{
+            background-color: $primary-color;
+        }
     }
 }
 
 .urgent-nr-container {
-    font-size: 23px;
+    font-size: $task-underline-size;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,20 +81,17 @@ mat-card {
     gap: 25px;
 
     img {
-        height: 63px;
-        width: 63px;
         border-radius: 100%;
         border: 3px solid white;
     }
 
     span {
-        font-size: 48px;
-        font-weight: 500;
+        font-size: $num-of-size;
+        font-weight: $num-of-weigth;
     }
 }
 
 .seperator {
-    height: 100%;
     width: 5px;
     margin: 0 35px;
     background-color: white;
@@ -90,4 +112,30 @@ mat-card {
     span {
         font-size: 23px;
     }
+}
+
+.to-do-tasks {
+    font-size: $task-underline-size;
+    padding: 40px 42px;
+    background-color: $secondary-color;
+    color: $primary-color;
+    justify-content: center;
+    gap: 10px;
+
+    &:hover {
+        background-color: white;
+
+        .to-do-nr {
+            color: $primary-color;
+        }
+    }
+}
+
+.to-do-nr {
+    font-size: $num-of-size;
+    font-weight: $num-of-weigth;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
