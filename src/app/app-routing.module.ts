@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SummaryComponent } from './site/summary/summary.component';
-import { HelpComponent } from './site/help/help.component';
-import { LegalNoticeComponent } from './site/legal-notice/legal-notice.component';
+import { SummaryComponent } from './sites/summary/summary.component';
+import { HelpComponent } from './sites/help/help.component';
+import { LegalNoticeComponent } from './sites/legal-notice/legal-notice.component';
 
 const routes: Routes = [
   {path: '', component: SummaryComponent},
