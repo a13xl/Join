@@ -16,6 +16,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { HelpComponent } from './sites/help/help.component';
 import { LegalNoticeComponent } from './sites/legal-notice/legal-notice.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { HomeComponent } from './sites/home/home.component';
+import { FirebaseService } from './services/firebase.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,7 @@ import { LegalNoticeComponent } from './sites/legal-notice/legal-notice.componen
     SummaryComponent,
     HelpComponent,
     LegalNoticeComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,8 +41,10 @@ import { LegalNoticeComponent } from './sites/legal-notice/legal-notice.componen
     MatIconModule,
     MatToolbarModule,
     MatListModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,8 +2,6 @@
 
 A Kanban Board with Design from https://www.figma.com/file/mhDPfpde734bGDOh5W1U3f/Join-Version-2-final?type=design&node-id=0-1
 
-## Attention: Password isn't encrypted!
-
 _____________________________________________________________
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
