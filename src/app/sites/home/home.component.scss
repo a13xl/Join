@@ -2,6 +2,7 @@
 @import "src/_global.scss";
 
 $animation-duration: 1.5s;
+$padding: 50px;
 
 section {
     $bg-color: white;
@@ -32,24 +33,23 @@ section {
     }
   }
 
-.logo-container {
-    $padding: 50px;
-
+.main-container {
     position: relative;
     height: calc(100vh - (2 * $padding));
-    max-height: calc(100% - (2 * $padding));;
-    width: calc(1000px + (2 * $padding));;
-    max-width: calc(100% - (2 * $padding));;
+    max-height: calc(100% - (2 * $padding));
+    width: calc(1000px + (2 * $padding));
+    max-width: calc(100% - (2 * $padding));
     padding: $padding;
 }
   
 .logo-animation {
     $logo-height: 100px;
 
-    position: relative;
     /* top: 50px;
     left: 50px; */
     height: $logo-height;
+    width: auto;
+    object-fit: contain;
     filter: $filter-primary-color;
     animation: logoAnimation $animation-duration ease-in-out;
 
@@ -63,6 +63,7 @@ section {
             filter: unset;
         }
         70% {
+            position: absolute;
             height: 300px;
             top: 50%;
             left: 50%;
@@ -73,10 +74,10 @@ section {
             filter: $filter-primary-color;
         }
         100% {
-            position: relative;
+            position: absolute;
             height: $logo-height;
-            /* top: 50px;
-            left: 50px; */
+            top: $padding;
+            left: $padding;
         }
     }
 }
