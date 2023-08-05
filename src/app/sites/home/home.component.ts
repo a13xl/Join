@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FirebaseService } from 'src/app/services/firebase.service';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +7,7 @@ import { FirebaseService } from 'src/app/services/firebase.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  @Output() isLogout = new EventEmitter<void>();
 
-  constructor(public firebaseService: FirebaseService) {}
+  constructor(public appComponent: AppComponent) { }
 
-  logout() {
-    this.firebaseService.logout();
-    this.isLogout.emit();
-  }
 }

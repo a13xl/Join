@@ -1,0 +1,84 @@
+// Import globale Style
+@import "src/_global.scss";
+
+$animation-duration: 1.5s;
+
+section {
+    $bg-color: white;
+
+    background-color: $bg-color;
+    height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgAnimation $animation-duration ease-in-out;
+
+    @keyframes bgAnimation {
+        0% {
+            background-color: $primary-color;
+        }
+        70% {
+            background-color: $primary-color;
+        }
+        71% {
+            background-color: $bg-color;
+        }
+        100% {
+            background-color: $bg-color;
+        }
+    }
+  }
+
+.logo-container {
+    $padding: 50px;
+
+    position: relative;
+    height: calc(100vh - (2 * $padding));
+    max-height: calc(100% - (2 * $padding));;
+    width: calc(1000px + (2 * $padding));;
+    max-width: calc(100% - (2 * $padding));;
+    padding: $padding;
+}
+  
+.logo-animation {
+    $logo-height: 100px;
+
+    position: relative;
+    /* top: 50px;
+    left: 50px; */
+    height: $logo-height;
+    filter: $filter-primary-color;
+    animation: logoAnimation $animation-duration ease-in-out;
+
+    @keyframes logoAnimation {
+        0% {
+            position: absolute;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: unset;
+        }
+        70% {
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: unset;
+        }
+        71% {
+            filter: $filter-primary-color;
+        }
+        100% {
+            position: relative;
+            height: $logo-height;
+            /* top: 50px;
+            left: 50px; */
+        }
+    }
+}
+
+
