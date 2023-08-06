@@ -8,6 +8,6 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class HomeComponent {
 
-  constructor(public appComponent: AppComponent) { }
-
+/*   constructor(public appComponent: AppComponent) { }
+ */
 }

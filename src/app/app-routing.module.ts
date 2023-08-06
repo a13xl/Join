@@ -4,10 +4,10 @@ import { SummaryComponent } from './sites/summary/summary.component';
 import { HelpComponent } from './sites/help/help.component';
 import { LegalNoticeComponent } from './sites/legal-notice/legal-notice.component';
 import { UserLoginComponent } from './sites/user-login/user-login.component';
-import { HomeComponent } from './sites/home/home.component';
+import { WelcomeComponent } from './sites/welcome/welcome.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: WelcomeComponent},
   {path: 'sign-in', component: UserLoginComponent},
   //{path: 'sign-up', component: SummaryComponent},
   {path: 'summary', component: SummaryComponent},

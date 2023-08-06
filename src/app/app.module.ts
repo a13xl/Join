@@ -21,6 +21,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HomeComponent } from './sites/home/home.component';
 import { FirebaseService } from './services/firebase.service';
 import { UserLoginComponent } from './sites/user-login/user-login.component';
+import { WelcomeComponent } from './sites/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UserLoginComponent } from './sites/user-login/user-login.component';
     LegalNoticeComponent,
     HomeComponent,
     UserLoginComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
