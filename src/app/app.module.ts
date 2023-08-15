@@ -20,8 +20,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HomeComponent } from './sites/home/home.component';
 import { FirebaseService } from './services/firebase.service';
-import { UserLoginComponent } from './sites/user-login/user-login.component';
 import { WelcomeComponent } from './sites/welcome/welcome.component';
+import { SigninComponent } from './sites/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +30,8 @@ import { WelcomeComponent } from './sites/welcome/welcome.component';
     HelpComponent,
     LegalNoticeComponent,
     HomeComponent,
-    UserLoginComponent,
     WelcomeComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,

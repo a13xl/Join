@@ -7,7 +7,9 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent {
+  animationDuration: string = '1.5s';
 
   constructor(public appComponent: AppComponent) { }
 
+  
 }

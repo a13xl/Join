@@ -1,21 +1,34 @@
 // Import globale Style
 @import "src/_global.scss";
 
-$animation-duration: 1.5s;
 $padding: 50px;
+$bg-color: transparent;
 
 section {
-    $bg-color: white;
-
     background-color: $bg-color;
     height: 100vh;
     max-height: 100%;
     width: 100vw;
     max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: bgAnimation $animation-duration ease-in-out;
+  }
+
+.main-container {
+    position: relative;
+    height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.logo-container-animation {
+    position: absolute;
+    height: calc(100vh - (2 * $padding));
+    max-height: calc(100% - (2 * $padding));
+    width: calc(1000px + (2 * $padding));
+    max-width: calc(100% - (2 * $padding));
+    padding: $padding;
+
+    animation: bgAnimation ease-in-out;
 
     @keyframes bgAnimation {
         0% {
@@ -25,33 +38,32 @@ section {
             background-color: $primary-color;
         }
         71% {
-            background-color: $bg-color;
+            background-color: white;
         }
         100% {
             background-color: $bg-color;
         }
     }
-  }
+}
 
-.main-container {
-    position: relative;
+.logo-container {
+    position: absolute;
     height: calc(100vh - (2 * $padding));
     max-height: calc(100% - (2 * $padding));
     width: calc(1000px + (2 * $padding));
     max-width: calc(100% - (2 * $padding));
     padding: $padding;
 }
-  
+
 .logo-animation {
+    position: absolute;
     $logo-height: 100px;
 
-    /* top: 50px;
-    left: 50px; */
     height: $logo-height;
     width: auto;
     object-fit: contain;
     filter: $filter-primary-color;
-    animation: logoAnimation $animation-duration ease-in-out;
+    animation: logoAnimation ease-in-out;
 
     @keyframes logoAnimation {
         0% {
@@ -82,4 +94,12 @@ section {
     }
 }
 
+.logo {
+    position: absolute;
+    $logo-height: 100px;
 
+    height: $logo-height;
+    width: auto;
+    object-fit: contain;
+    filter: $filter-primary-color;
+}
