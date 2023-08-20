@@ -20,7 +20,6 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HomeComponent } from './sites/home/home.component';
 import { FirebaseService } from './services/firebase.service';
-import { WelcomeComponent } from './sites/welcome(DELETE)/welcome.component';
 import { SigninComponent } from './sites/signin/signin.component';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { SigninComponent } from './sites/signin/signin.component';
     HelpComponent,
     LegalNoticeComponent,
     HomeComponent,
-    WelcomeComponent,
     SigninComponent,
   ],
   imports: [

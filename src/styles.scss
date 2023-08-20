@@ -41,7 +41,14 @@ $join-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.mat-typography button input h1 h2 h3 h4{
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
 
 h1 {
   font-size: 60px !important;
@@ -106,4 +113,14 @@ d-none {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $font-color-2; 
+}
+
+/* ===== FONTS ===== */
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/open-sans-v35-latin/open-sans-v35-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }

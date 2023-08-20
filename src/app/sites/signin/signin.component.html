@@ -8,17 +8,20 @@
         <!-- TASK: if logged on redirect to Dashboard -->
         
         <div #contentOverlay class="content">
-            <div>
+            <div class="sign-up-content">
                 <span>Not a {{appComponent.title}} user?</span>
                 <button>Sign up</button>
             </div>
 
             <!-- SIGN-IN FORM -->
-            <form #signInForm class="sign-in-form" (ngSubmit)="signIn()">
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button class="noselect" type="submit">Sign In</button>
-            </form>
+            <div class="sign-in-content">
+                <h1>Log in</h1>
+                <form #signInForm class="sign-in-form" (ngSubmit)="signIn()">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button class="noselect" type="submit">Sign In</button>
+                </form>
+            </div>
 
             <div>
                 <span>Privacy Policy</span>
