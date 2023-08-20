@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-signin',
@@ -6,11 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent {
+  @ViewChild("contentOverlay") contentOverlay!: ElementRef; 
+
   email: string = '';
   password: string = '';
+  animationDuration: number = 1500;
+  animationDurationClass: string = this.animationDuration + 'ms';
+
+  constructor(public appComponent: AppComponent,
+    private elementRef: ElementRef) { }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.contentOverlay.nativeElement.classList.add('content-z-index');
+    }, this.animationDuration);    
+  }
 
   signIn() {
       // Implement your sign in logic here
       // You can use services to communicate with the backend
+      console.log('sign in');
+      
   }
 }

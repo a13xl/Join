@@ -1,0 +1,123 @@
+// Import globale Style
+@import "src/_global.scss";
+
+$padding: 50px;
+$bg-color: transparent;
+
+section {
+    background-color: $bg-color;
+    height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    max-width: 100%;
+  }
+
+.main-container {
+    position: relative;
+    height: calc(100vh - (2 * $padding));
+    max-height: calc(100% - (2 * $padding));
+    width: calc(1000px + (2 * $padding));
+    max-width: calc(100% - (2 * $padding));
+    padding: $padding;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container-animation {
+    position: absolute;
+    height: calc(100vh - (2 * $padding));
+    max-height: calc(100% - (2 * $padding));
+    width: calc(1000px + (2 * $padding));
+    max-width: calc(100% - (2 * $padding));
+    padding: $padding;
+
+    animation: bgAnimation ease-in-out;
+
+    @keyframes bgAnimation {
+        0% {
+            background-color: $primary-color;
+        }
+        70% {
+            background-color: $primary-color;
+        }
+        71% {
+            background-color: white;
+        }
+        100% {
+            background-color: $bg-color;
+        }
+    }
+}
+
+.logo-container {
+    position: absolute;
+    height: calc(100vh - (2 * $padding));
+    max-height: calc(100% - (2 * $padding));
+    width: calc(1000px + (2 * $padding));
+    max-width: calc(100% - (2 * $padding));
+    padding: $padding;
+}
+
+.logo-animation {
+    position: absolute;
+    $logo-height: 100px;
+
+    height: $logo-height;
+    width: auto;
+    object-fit: contain;
+    filter: $filter-primary-color;
+    animation: logoAnimation ease-in-out;
+
+    @keyframes logoAnimation {
+        0% {
+            position: absolute;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: unset;
+        }
+        70% {
+            position: absolute;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: unset;
+        }
+        71% {
+            filter: $filter-primary-color;
+        }
+        100% {
+            position: absolute;
+            height: $logo-height;
+            top: $padding;
+            left: $padding;
+        }
+    }
+}
+
+.logo {
+    position: absolute;
+    $logo-height: 100px;
+
+    height: $logo-height;
+    width: auto;
+    object-fit: contain;
+    filter: $filter-primary-color;
+}
+
+.content-z-index {
+    z-index: 1;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

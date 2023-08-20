@@ -1,5 +1,29 @@
-<form (ngSubmit)="signIn()">
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit">Sign In</button>
-</form>
+<section>
+    <div class="main-container">
+
+        <div class="logo-container-animation" [style.animationDuration]="animationDurationClass">
+            <img class="logo-animation noselect" src="{{ appComponent.logo }}"
+            alt="{{ appComponent.title }} Logo" [style.animationDuration]="animationDurationClass">
+        </div>
+        <!-- TASK: if logged on redirect to Dashboard -->
+        
+        <div #contentOverlay class="content">
+            <div>
+                <span>Not a {{appComponent.title}} user?</span>
+                <button>Sign up</button>
+            </div>
+
+            <!-- SIGN-IN FORM -->
+            <form #signInForm class="sign-in-form" (ngSubmit)="signIn()">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button class="noselect" type="submit">Sign In</button>
+            </form>
+
+            <div>
+                <span>Privacy Policy</span>
+                <span>Legal Notice</span>
+            </div>
+        </div>
+    </div>
+</section>
