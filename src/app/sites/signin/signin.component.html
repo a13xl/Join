@@ -27,7 +27,7 @@
                             <input type="email" name="email" placeholder="Email" required>
                             <img src="assets/icon/mail.png" alt="Mail icon">
                         </div>
-                        <span #errorEmail></span>
+                        <span class="errorbox" #errorEmail></span>
                     </div>
 
                     <div class="">
@@ -35,15 +35,24 @@
                             <input type="password" name="password" placeholder="Password" required>
                             <img src="assets/icon/lock.png" alt="Lock icon">
                         </div>
-                        <span #errorPw></span>
+                        <span class="errorbox" #errorPw></span>
                     </div>
-
+                    <div class="sign-in-argument">
+                        <div class="">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </div>
+                        <a href="#">I forgot my password</a>
+                    </div>
                     
-                    <button class="noselect" type="submit">Sign In</button>
+                    <div class="btn-container noselect">
+                        <button class="submit" type="submit">Log in</button>
+                        <button class="guest" type="button">Guest log in</button>
+                    </div>
                 </form>
             </div>
 
-            <div>
+            <div class="privacy-container">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Legal Notice</a>
             </div>

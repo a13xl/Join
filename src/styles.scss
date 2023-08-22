@@ -43,11 +43,10 @@ $join-theme: mat.define-light-theme((
 html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.mat-typography button input h1 h2 h3 h4{
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+.mat-typography, button, input, h1, h2, h3, h4{
+  font-family: "Open Sans", "Helvetica Neue", sans-serif !important;
 }
 
 h1 {

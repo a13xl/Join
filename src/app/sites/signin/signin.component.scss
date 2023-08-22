@@ -173,7 +173,6 @@ section {
         padding: 0;
         margin: 0 0 10px;
         font-size: 48px !important;
-        font-family: 'Open Sans';
         color: $font-color-1;
     }
 
@@ -193,7 +192,7 @@ section {
     align-items: center;
     gap: 10px;
 
-    span {
+    .errorbox {
         $font-size: 12px;
 
         height: calc($font-size + 5px);
@@ -220,3 +219,77 @@ section {
     }
 }
 
+.sign-in-argument {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    input {
+        margin: 0;
+        display: inline-block;
+        border: 1px solid $primary-color;
+        outline: none;
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.btn-container {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+        padding: 7px 25px;
+        font-size: 18px;
+        border-radius: 10px;
+        background: none;
+        cursor: pointer;
+    }
+
+    .submit {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        color: $font-color-2;
+
+        &:hover {
+            background-color: $third-color;
+            border: 1px solid $third-color;
+        }
+    }
+
+    .guest {
+        $color: #647188;
+
+        border: 1px solid $color;
+        color: $color;
+
+        &:hover {
+            border: 1px solid $font-color-1;
+            color: $font-color-1;
+        }
+    }
+}
+
+.privacy-container {
+    display: flex;
+    gap: 40px;
+
+    a {
+        text-decoration: none;
+        color: #42526E;
+        cursor: pointer;
+    }
+}
