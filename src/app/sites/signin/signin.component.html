@@ -1,31 +1,51 @@
 <section>
     <div class="main-container">
 
-        <div class="logo-container-animation" [style.animationDuration]="animationDurationClass">
-            <img class="logo-animation noselect" src="{{ appComponent.logo }}"
-            alt="{{ appComponent.title }} Logo" [style.animationDuration]="animationDurationClass">
+        <div class="logo-container-bg" [style.animationDuration]="animationDurationClass">
+            <div class="logo-container">
+                <img class="logo-animation noselect" src="{{ appComponent.logo }}"
+                alt="{{ appComponent.title }} Logo" [style.animationDuration]="animationDurationClass">
+            </div>
         </div>
         <!-- TASK: if logged on redirect to Dashboard -->
         
         <div #contentOverlay class="content">
             <div class="sign-up-content">
                 <span>Not a {{appComponent.title}} user?</span>
-                <button>Sign up</button>
+                <button class="noselect">Sign up</button>
             </div>
 
             <!-- SIGN-IN FORM -->
             <div class="sign-in-content">
-                <h1>Log in</h1>
-                <form #signInForm class="sign-in-form" (ngSubmit)="signIn()">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Password" required>
+                <div class="sign-in-headline">
+                    <h1>Log in</h1>
+                    <div></div>
+                </div>
+                <form #signInForm class="sign-in-form noselect" (ngSubmit)="signIn()">
+                    <div class="">
+                        <div class="input-container">
+                            <input type="email" name="email" placeholder="Email" required>
+                            <img src="assets/icon/mail.png" alt="Mail icon">
+                        </div>
+                        <span #errorEmail></span>
+                    </div>
+
+                    <div class="">
+                        <div class="input-container">
+                            <input type="password" name="password" placeholder="Password" required>
+                            <img src="assets/icon/lock.png" alt="Lock icon">
+                        </div>
+                        <span #errorPw></span>
+                    </div>
+
+                    
                     <button class="noselect" type="submit">Sign In</button>
                 </form>
             </div>
 
             <div>
-                <span>Privacy Policy</span>
-                <span>Legal Notice</span>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Legal Notice</a>
             </div>
         </div>
     </div>
