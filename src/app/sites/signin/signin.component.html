@@ -3,7 +3,7 @@
 
         <div class="logo-container-bg" [style.animationDuration]="animationDurationClass">
             <div class="logo-container">
-                <img class="logo-animation noselect" src="{{ appComponent.logo }}"
+                <img class="logo-img noselect" src="{{ appComponent.logo }}"
                 alt="{{ appComponent.title }} Logo" [style.animationDuration]="animationDurationClass">
             </div>
         </div>
@@ -12,16 +12,18 @@
         <div #contentOverlay class="content">
             <div class="sign-up-content">
                 <span>Not a {{appComponent.title}} user?</span>
-                <button class="noselect">Sign up</button>
+                <button (click)="redirectSignUp()" class="noselect">Sign up</button>
             </div>
 
             <!-- SIGN-IN FORM -->
-            <div class="sign-in-content">
-                <div class="sign-in-headline">
-                    <h1>Log in</h1>
-                    <div></div>
+            <div class="form-content">
+                <div class="headline-container">
+                    <div class="form-headline">
+                        <h1>Log in</h1>
+                        <div></div>
+                    </div>
                 </div>
-                <form #signInForm class="sign-in-form noselect" (ngSubmit)="signIn()">
+                <form #signInForm class="form noselect" (ngSubmit)="signIn()">
                     <div class="">
                         <div class="input-container">
                             <input type="email" name="email" placeholder="Email" required>
@@ -37,7 +39,7 @@
                         </div>
                         <span class="errorbox" #errorPw></span>
                     </div>
-                    <div class="sign-in-argument">
+                    <div class="form-argument">
                         <div class="">
                             <input type="checkbox">
                             <span>Remember me</span>

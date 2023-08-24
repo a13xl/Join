@@ -1,1 +1,80 @@
-<p>signup works!</p>
+<section>
+    <div class="main-container">
+
+        <div class="logo-container-bg">
+            <div class="logo-container">
+                <img class="logo-img noselect" src="{{ appComponent.logo }}"
+                alt="{{ appComponent.title }} Logo">
+            </div>
+        </div>
+        <!-- TASK: if logged on redirect to Dashboard -->
+        
+        <div #contentOverlay class="content">
+            <div></div> <!-- empty div for style -->
+
+            <!-- SIGN-UP FORM -->
+            <div class="form-content">
+                <div class="headline-container">
+                    <img src="assets/icon/return.png" alt="Arrow left icon" title="Log in"
+                    class="go-back-icon" (click)="redirectSignIn()">
+                    <div class="form-headline">
+                        <h1>Sign up</h1>
+                        <div></div>
+                    </div>
+                </div>
+                <form #signUpForm class="form noselect" (ngSubmit)="signUp()">
+                    <div class="">
+                        <div class="sign-up-name-container">
+                            <div class="input-container">
+                                <input type="text" name="firstname" placeholder="First name" required>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="lastname" placeholder="Last name" required>
+                            </div>
+                        </div>
+                        <span class="errorbox" #errorName></span>
+                    </div>
+
+                    <div class="">
+                        <div class="input-container">
+                            <input type="email" name="email" placeholder="Email" required>
+                            <img src="assets/icon/mail.png" alt="Mail icon">
+                        </div>
+                        <span class="errorbox" #errorEmail></span>
+                    </div>
+
+                    <div class="">
+                        <div class="input-container">
+                            <input type="password" name="password" placeholder="Password" required>
+                            <img src="assets/icon/lock.png" alt="Lock icon">
+                        </div>
+                        <span class="errorbox" #errorPw></span>
+                    </div>
+                    <div class="">
+                        <div class="input-container">
+                            <input type="password" name="password" placeholder="Confirm Password" required>
+                            <img src="assets/icon/lock.png" alt="Lock icon">
+                        </div>
+                        <span class="errorbox" #errorPw></span>
+                    </div>
+
+                    <div class="form-argument">
+                        <input type="checkbox">
+                        <span>I accept the</span>
+                        <a href="#">Privacy policy</a>
+                    </div>
+                    
+                    <div class="btn-container">
+                        <button class="submit" type="submit">Sign up</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="privacy-container">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Legal Notice</a>
+            </div>
+        </div>
+    </div>
+</section>
+

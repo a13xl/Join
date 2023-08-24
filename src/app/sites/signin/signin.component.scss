@@ -2,7 +2,7 @@
 @import "src/_global.scss";
 
 $padding: 50px;
-$bg-color: transparent;
+/* $bg-color: transparent; */
 $max-size: 2000px;
 
 section {
@@ -47,10 +47,10 @@ section {
             background-color: $primary-color;
         }
         71% {
-            background-color: white;
+            background-color: $bg-color;
         }
         100% {
-            background-color: $bg-color;
+            background-color: transparent;
         }
     }
 }
@@ -64,7 +64,7 @@ section {
     padding: $padding;
 }
 
-.logo-animation {
+.logo-img {
     position: absolute;
     $logo-height: 100px;
 
@@ -153,7 +153,8 @@ section {
     }
 }
 
-.sign-in-content {
+.form-content {
+    //position: relative;
     padding: 40px 60px;
     -webkit-box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1); 
     box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1);
@@ -167,7 +168,26 @@ section {
     
 }
 
-.sign-in-headline {
+.headline-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        $size: 25px;
+
+        position: absolute;
+        left: 0;
+        top: 30%;
+        height: $size;
+        width: $size;
+        filter: invert(30%) sepia(94%) saturate(6445%) hue-rotate(217deg) brightness(105%) contrast(103%);
+        cursor: pointer;
+    }
+}
+
+.form-headline {
 
     h1 {
         padding: 0;
@@ -183,7 +203,7 @@ section {
     }
 }
 
-.sign-in-form {
+.form {
     $padding-site: 10px;
 
     display: flex;
@@ -203,6 +223,7 @@ section {
 
     .input-container {
         padding: 5px $padding-site;
+        overflow: hidden;
         border-bottom: 1px solid $input-border-color;
     
         display: flex;
@@ -211,7 +232,7 @@ section {
         gap: 10px;
     
         input {
-            width: 300px;
+            width: 321px;
             border: 0;
             outline: none;
             font-size: 18px;
@@ -219,7 +240,7 @@ section {
     }
 }
 
-.sign-in-argument {
+.form-argument {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -232,7 +253,7 @@ section {
     }
 
     input {
-        margin: 0;
+        margin: 1px 0 0 0;
         display: inline-block;
         border: 1px solid $primary-color;
         outline: none;

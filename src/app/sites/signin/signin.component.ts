@@ -14,8 +14,7 @@ export class SigninComponent {
   animationDuration: number = 1500;
   animationDurationClass: string = this.animationDuration + 'ms';
 
-  constructor(public appComponent: AppComponent,
-    private elementRef: ElementRef) { }
+  constructor(public appComponent: AppComponent) { }
 
   ngAfterViewInit() {
     setTimeout(() => {
@@ -28,5 +27,9 @@ export class SigninComponent {
       // You can use services to communicate with the backend
       console.log('sign in');
       
+  }
+
+  redirectSignUp() {
+    window.location.href = '/sign-up';
   }
 }

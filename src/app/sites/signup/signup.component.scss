@@ -3,3 +3,55 @@
 
 // Import sign-in Style
 @import "src/app/sites/signin/signin.component.scss";
+
+section {
+    background-color: $primary-color;
+}
+
+.content {
+    z-index: 1;
+}
+
+.logo-img {
+    filter: none;
+}
+
+.form-content {
+    background-color: $bg-color;
+}
+
+.headline-container {
+    position: relative;
+}
+
+.sign-up-name-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    .input-container {
+        input {
+            width: 170px;
+        }
+
+        &:nth-child(1) {
+            padding-right: 0;
+        }
+
+        &:nth-child(2) {
+            padding-left: 0;
+        }
+    }
+}
+
+.form-argument {
+    justify-content: center;
+    gap: 7px;
+}
+
+.privacy-container {
+    a {
+        color: $font-color-2;
+    }
+}
