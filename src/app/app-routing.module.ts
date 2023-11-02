@@ -6,13 +6,39 @@ import { LegalNoticeComponent } from './sites/legal-notice/legal-notice.componen
 import { SigninComponent } from './sites/signin/signin.component';
 import { SignupComponent } from './sites/signup/signup.component';
 
+const title = 'Join';
+
 const routes: Routes = [
-  {path: '', component: SigninComponent},
-  {path: 'sign-in', component: SigninComponent},
-  {path: 'sign-up', component: SignupComponent},
-  {path: 'summary', component: SummaryComponent},
-  {path: 'help', component: HelpComponent},
-  {path: 'legal-notice', component: LegalNoticeComponent},
+  {
+    path: '',
+    component: SummaryComponent,
+    title: title
+  },
+  {
+    path: 'sign-in',
+    component: SigninComponent,
+    title: title + ' - Sign In'
+  },
+  {
+    path: 'sign-up',
+    component: SignupComponent,
+    title: title + ' - Sign Up'
+  },
+  {
+    path: 'summary',
+    component: SummaryComponent,
+    title: title
+  },
+  {
+    path: 'help',
+    component: HelpComponent,
+    title: title + ' - Help'
+  },
+  {
+    path: 'legal-notice',
+    component: LegalNoticeComponent,
+    title: title + ' - Legal notice'
+  },
 ];
 
 @NgModule({
