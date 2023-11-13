@@ -22,6 +22,8 @@ import { HomeComponent } from './sites/home/home.component';
 import { FirebaseService } from './services/firebase.service';
 import { SigninComponent } from './sites/signin/signin.component';
 import { SignupComponent } from './sites/signup/signup.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { SignupComponent } from './sites/signup/signup.component';
     MatListModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    FormsModule,
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

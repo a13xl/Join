@@ -59,13 +59,13 @@
                     </div>
 
                     <div class="form-argument">
-                        <input type="checkbox">
-                        <span>I accept the</span>
+                        <input type="checkbox" name="checkbox" [(ngModel)]="isChecked" (ngModelChange)="onCheckboxChange($event)">
+                        <span (click)="toggleCheckbox()">I accept the</span>
                         <a href="#">Privacy policy</a>
                     </div>
                     
                     <div class="btn-container">
-                        <button class="submit" type="submit">Sign up</button>
+                        <button class="submit" type="submit" [disabled]="!isChecked">Sign up</button>
                     </div>
                 </form>
             </div>

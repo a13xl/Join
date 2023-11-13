@@ -7,6 +7,7 @@ import { AppComponent } from 'src/app/app.component';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
+  isChecked: boolean = false;
 
   constructor(public appComponent: AppComponent) { }
 
@@ -19,5 +20,13 @@ export class SignupComponent {
 
   redirectSignIn() {
     window.location.href = '/sign-in';
+  }
+
+  onCheckboxChange(value: boolean) {
+    this.isChecked = value;
+  }
+
+  toggleCheckbox() {
+    this.isChecked = !this.isChecked;
   }
 }
